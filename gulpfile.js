@@ -8,3 +8,5 @@ function buildStyles() {
 function watchTask() {
   watch(["index.scss"], buildStyles);
 }
+
+exports.default = series(buildStyles, watchTask);
